@@ -38,6 +38,11 @@ It will generate an access endpoint as output for your web service, allowing it 
 | <a name="input_image"></a> [image](#input\_image) | Docker image name | `string` | n/a | yes |
 | <a name="input_limit_cpu"></a> [limit\_cpu](#input\_limit\_cpu) | CPU limit. e.g. 0.5, 1, 2 | `string` | `""` | no |
 | <a name="input_limit_memory"></a> [limit\_memory](#input\_limit\_memory) | Memory limit. e.g. 128Mi, 512Mi, 1Gi, 2Gi, 4Gi | `string` | `""` | no |
+| <a name="input_list_bool"></a> [list\_bool](#input\_list\_bool) | list bool. | `list(bool)` | n/a | yes |
+| <a name="input_list_map"></a> [list\_map](#input\_list\_map) | list map string. | `list(map(string))` | n/a | yes |
+| <a name="input_list_string"></a> [list\_string](#input\_list\_string) | list string. | `list(string)` | n/a | yes |
+| <a name="input_map_bool"></a> [map\_bool](#input\_map\_bool) | map bool. | `map(bool)` | n/a | yes |
+| <a name="input_map_string"></a> [map\_string](#input\_map\_string) | map string. | `map(string)` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | Name of the deployment resource. Auto-generated if empty. | `string` | `""` | no |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | Namespace to deploy. Auto-generated if empty. | `string` | `""` | no |
 | <a name="input_ports"></a> [ports](#input\_ports) | Service ports to expose | `list(number)` | <pre>[<br>  80<br>]</pre> | no |

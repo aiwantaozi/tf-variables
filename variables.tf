@@ -67,6 +67,36 @@ variable "name" {
   description = "Name of the deployment resource. Auto-generated if empty."
   default     = ""
 }
+# @label "list bool"
+# @group "Variable Test"
+variable "list_bool" {
+  type        = list(bool)
+  description = "list bool."
+}
+# @label "list string"
+# @group "Variable Test"
+variable "list_string" {
+  type        = list(string)
+  description = "list string."
+}
+# @label "list map"
+# @group "Variable Test"
+variable "list_map" {
+  type        = list(map(string))
+  description = "list map string."
+}
+# @label "map bool"
+# @group "Variable Test"
+variable "map_bool" {
+  type        = map(bool)
+  description = "map bool."
+}
+# @label "map string"
+# @group "Variable Test"
+variable "map_string" {
+  type        = map(string)
+  description = "map string."
+}
 # @hidden
 variable "walrus_metadata_service_name" {
   type        = string
