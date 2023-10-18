@@ -72,6 +72,7 @@ variable "name" {
 variable "list_bool" {
   type        = list(bool)
   description = "list bool."
+  default     = []
 }
 # @label "list string"
 # @group "Variable Test"
@@ -90,6 +91,7 @@ variable "list_map" {
 variable "map_bool" {
   type        = map(bool)
   description = "map bool."
+  default     = {}
 }
 # @label "map string"
 # @group "Variable Test"
@@ -97,6 +99,35 @@ variable "map_string" {
   type        = map(string)
   description = "map string."
 }
+# @label "Volume Empty"
+# @group "Variable Test"
+variable "volume_empty_dir" {
+  type = list(object({
+    volume_name = string
+    medium      = optional(string)
+    size_limit  = optional(string)
+  }))
+  description = "EmptyDir represents a temporary directory that shares a pod's lifetime"
+  default     = []
+}
+# @label "Volume Secret"
+# @group "Variable Test"
+variable "volume_secret" {
+  type = list(object({
+    volume_name  = string
+    secret_name  = string
+    default_mode = optional(string)
+    optional     = optional(string)
+    items = optional(list(object({
+      key  = string
+      path = string
+      mode = optional(string)
+    })), [])
+  }))
+  description = "Create volume from secret"
+  default     = []
+}
+
 # @hidden
 variable "walrus_metadata_service_name" {
   type        = string
