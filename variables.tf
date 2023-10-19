@@ -98,6 +98,7 @@ variable "map_bool" {
 variable "map_string" {
   type        = map(string)
   description = "map string."
+  default     = {}
 }
 # @label "Volume Empty"
 # @group "Variable Test"
@@ -126,6 +127,11 @@ variable "volume_secret" {
   }))
   description = "Create volume from secret"
   default     = []
+}
+# @label "any"
+# @group "Variable Test"
+variable "any" {
+  description = "any type"
 }
 
 # @hidden
