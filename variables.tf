@@ -133,7 +133,12 @@ variable "volume_secret" {
 variable "any" {
   description = "any type"
 }
-
+# @label "any2"
+# @group "Variable Test"
+variable "any2" {
+  type        = any
+  description = "any type"
+}
 # @hidden
 variable "walrus_metadata_service_name" {
   type        = string
