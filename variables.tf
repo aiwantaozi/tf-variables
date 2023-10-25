@@ -123,7 +123,7 @@ variable "volume_secret" {
       key  = string
       path = string
       mode = optional(string)
-    })), [])
+    })))
   }))
   description = "Create volume from secret"
   default     = []
