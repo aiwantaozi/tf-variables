@@ -8,7 +8,7 @@ components:
       type: string
       title: Image Name
       description: Docker image name
-      x-ui:
+      x-walrus-ui:
         group: Basic
     ports:
       title: Ports
@@ -18,7 +18,7 @@ components:
       - 80
       items:
         type: integer
-      x-ui:
+      x-walrus-ui:
         group: Basic
     env:
       title: Environment Variables
@@ -26,28 +26,28 @@ components:
       description: Name and value pairs to set as the environment variables
       additionalProperties:
         type: string
-      x-ui:
+      x-walrus-ui:
         group: Basic
     replicas:
       title: Replicas
       type: number
       description: Replicas to deploy
       default: 1
-      x-ui:
+      x-walrus-ui:
         group: Basic
     request_cpu:
       title: CPU Request
       type: string
       description: CPU request. e.g. 0.5, 1, 2
       default: '0.1'
-      x-ui:
+      x-walrus-ui:
         group: Resources
     request_memory:
       title: Memory Request
       type: string
       default: 128Mi
       description: Memory request. e.g. 128Mi, 512Mi, 1Gi, 2Gi, 4Gi
-      x-ui:
+      x-walrus-ui:
         widget: MemoryInput
         group: Resources
     limit_cpu:
@@ -55,14 +55,14 @@ components:
       type: string
       description: CPU limit. e.g. 0.5, 1, 2
       default: ''
-      x-ui:
+      x-walrus-ui:
         group: Resources
     limit_memory:
       title: Memory Request
       type: string
       description: Memory limit. e.g. 128Mi, 512Mi, 1Gi, 2Gi, 4Gi
       default: ''
-      x-ui:
+      x-walrus-ui:
         widget: MemoryInput
         group: Resources
     namespace:
@@ -70,7 +70,7 @@ components:
       type: string
       description: Namespace to deploy. Auto-generated if empty.
       default: ''
-      x-ui:
+      x-walrus-ui:
         widget: NamespaceSelect
         group: Advance
     name:
@@ -78,5 +78,5 @@ components:
       type: string
       description: Name of the deployment resource. Auto-generated if empty.
       default: ''
-      x-ui:
+      x-walrus-ui:
         group: Advance
